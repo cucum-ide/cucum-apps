@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+    theia:
+        image: "cucum/theia-standard"
+        restart: "always"
+        networks: 
+            - ide
+    proxy:
+        image: "nginx"
+        restart: "always"
+        environment:
+            - DOMAIN=m.visitme.cyou
+        volumes: 
+            - ./default.conf:/etc/nginx/conf.d/default.conf
+        ports: 
+            - 80:80
+        networks: 
+            - ide
+
+networks: 
+    ide:

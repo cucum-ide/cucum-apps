@@ -1,0 +1,1 @@
+You can set your custom domain in the default.conf file.
