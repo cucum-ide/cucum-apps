@@ -13,8 +13,6 @@ services:
             - DOMAIN=m.visitme.cyou
         volumes: 
             - ./default.conf:/etc/nginx/conf.d/default.conf
-        ports: 
-            - 80:80
         networks: 
             - ide
 
